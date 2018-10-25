@@ -1,27 +1,14 @@
-{% load static %}
+{% extends 'plantilla_general.html' %}
 
-<html>
-	<head>
-		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-	</head>
-	<body>
-		<div class="content container">
-		    <div class="row">
-		        <div class="col-md-8">
-		            {% for post in posts %}
-		                <div class="post">
-		                    <div class="date">
-		                        <p>published: {{ post.published_date }}</p>
-		                    </div>
-		                    <h1><a href="">{{ post.title }}</a></h1>
-		                    <p>{{ post.text|linebreaksbr }}</p>
-		                </div>
-		            {% endfor %}
-		        </div>
-		    </div>
+{% block content %}
+	{% for post in posts %}
+		<div class="post">
+			<div class="date">
+				<p>published: {{ post.published_date }}</p>
+			</div>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaksbr }}</p>
+			<a class="btn btn-info" href="/post/{{post.id}}/">Abrir</a>
 		</div>
-	</body>
-	<footer>
-		<script src="{% static "js/bootstrap.min.js" %}"></script>
-	</footer>
-</html>
+	{% endfor %}
+{% endblock	 %}
