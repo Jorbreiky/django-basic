@@ -3,5 +3,10 @@
 		<div>
 			<label for="">Hola Mundo desde DJango</label>
 		</div>
+		<div>
+			{% for post in posts %}
+				<label for="">{{post}}</label> <br>
+			{% endfor %}
+		</div>
 	</body>
 </html>
