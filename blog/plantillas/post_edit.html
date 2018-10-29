@@ -1,0 +1,65 @@
+{% extends 'contenedor/base.html' %}
+{% block content %}
+	<div class="container">
+		<div class="panel panel-primary">
+			
+			<div class="panel-heading">
+				<div class="panel-title">Editar Post</div>
+			</div>
+			<div class="panel-body">
+				
+				<form action="/postSave/" >
+					
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="nk-container fm-cmp-mg">
+							<div class="input-group form-group form-elet-mg">
+								<span class="input-group-addon">Post Id: </span>
+								<div class="nk-line dropdown nk-int-st">
+									<input type="text" class="form-control nk-value" value="{{post.id}}" data-toggle="dropdown"/>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="nk-container fm-cmp-mg">
+							<div class="input-group form-group form-elet-mg">
+								<span class="input-group-addon">Fecha Publicaci&oacute;n: </span>
+								<div class="nk-line dropdown nk-int-st">
+									<input type="text" class="form-control nk-value" value="{{ post.published_date }}" data-toggle="dropdown"/>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="nk-container fm-cmp-mg">
+							<div class="input-group form-group form-elet-mg">
+								<span class="input-group-addon">Titulo: </span>
+								<div class="nk-line dropdown nk-int-st">
+									<input type="text" class="form-control nk-value" value="{{ post.title }}" data-toggle="dropdown"/>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+						<div class="nk-container fm-cmp-mg">
+							<div class="input-group form-group form-elet-mg">
+								<span class="input-group-addon">Texto: </span>
+								<div class="nk-line dropdown nk-int-st">
+									<input type="text" class="form-control nk-value" value="{{ post.text|linebreaksbr }}" data-toggle="dropdown"/>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<br>
+						<button class="btn btn-primary">Guardar</button>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	{% endblock %}

@@ -24,7 +24,6 @@
     <link rel="stylesheet" href={% static "css/responsive.css" %}>
     <script src={% static "js/vendor/modernizr-2.8.3.min.js" %}></script>
 </head>
-
 <body>
     <div class="login-content">
         <!-- Login -->
@@ -33,24 +32,23 @@
                 <div class="input-group">
                     <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-support"></i></span>
                     <div class="nk-int-st">
-                        <input type="text" class="form-control" placeholder="Username">
+                        <input type="text" class="form-control" placeholder="Usuario">
                     </div>
                 </div>
                 <div class="input-group mg-t-15">
                     <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
                     <div class="nk-int-st">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" class="form-control" placeholder="Contrase&ntilde;a">
                     </div>
                 </div>
-                <div class="fm-checkbox">
-                    <label><input type="checkbox" class="i-checks"> <i></i> Keep me signed in</label>
-                </div>
+                <!--<div class="fm-checkbox">
+                    <label><input type="checkbox" class="i-checks"> <i></i> Iniciar sesion para acceder</label>
+                </div>-->
                 <a href="#l-register" data-ma-action="nk-login-switch" data-ma-block="#l-register" class="btn btn-login btn-success btn-float"><i class="notika-icon notika-right-arrow right-arrow-ant"></i></a>
             </div>
-
             <div class="nk-navigation nk-lg-ic">
-                <a href="#" data-ma-action="nk-login-switch" data-ma-block="#l-register"><i class="notika-icon notika-plus-symbol"></i> <span>Register</span></a>
-                <a href="#" data-ma-action="nk-login-switch" data-ma-block="#l-forget-password"><i>?</i> <span>Forgot Password</span></a>
+                <a href="#" data-ma-action="nk-login-switch" data-ma-block="#l-register"><i class="notika-icon notika-plus-symbol"></i> <span>Registrar</span></a>
+                <a href="#" data-ma-action="nk-login-switch" data-ma-block="#l-forget-password"><i>?</i> <span>Contrase&ntilde;a olvidada</span></a>
             </div>
         </div>
 
@@ -60,21 +58,21 @@
                 <div class="input-group">
                     <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-support"></i></span>
                     <div class="nk-int-st">
-                        <input type="text" class="form-control" placeholder="Username">
+                        <input type="text" class="form-control" placeholder="Usuario">
                     </div>
                 </div>
 
                 <div class="input-group mg-t-15">
                     <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-mail"></i></span>
                     <div class="nk-int-st">
-                        <input type="text" class="form-control" placeholder="Email Address">
+                        <input type="text" class="form-control" placeholder="Correo">
                     </div>
                 </div>
 
                 <div class="input-group mg-t-15">
                     <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-edit"></i></span>
                     <div class="nk-int-st">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input type="password" class="form-control" placeholder="Contrase&ntilde;a">
                     </div>
                 </div>
 
@@ -82,20 +80,20 @@
             </div>
 
             <div class="nk-navigation rg-ic-stl">
-                <a href="#" data-ma-action="nk-login-switch" data-ma-block="#l-login"><i class="notika-icon notika-right-arrow"></i> <span>Sign in</span></a>
-                <a href="" data-ma-action="nk-login-switch" data-ma-block="#l-forget-password"><i>?</i> <span>Forgot Password</span></a>
+                <a href="#" data-ma-action="nk-login-switch" data-ma-block="#l-login"><i class="notika-icon notika-right-arrow"></i> <span>Iniciar</span></a>
+                <a href="" data-ma-action="nk-login-switch" data-ma-block="#l-forget-password"><i>?</i> <span>Contrase&ntilde;a olvidada</span></a>
             </div>
         </div>
 
         <!-- Forgot Password -->
         <div class="nk-block" id="l-forget-password">
             <div class="nk-form">
-                <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu risus. Curabitur commodo lorem fringilla enim feugiat commodo sed ac lacus.</p>
+                <p class="text-left">Introduce el correo electronico para enviarte la nueva contraseña</p>
 
                 <div class="input-group">
                     <span class="input-group-addon nk-ic-st-pro"><i class="notika-icon notika-mail"></i></span>
                     <div class="nk-int-st">
-                        <input type="text" class="form-control" placeholder="Email Address">
+                        <input type="text" class="form-control" placeholder="Correo">
                     </div>
                 </div>
 
@@ -103,12 +101,11 @@
             </div>
 
             <div class="nk-navigation nk-lg-ic rg-ic-stl">
-                <a href="" data-ma-action="nk-login-switch" data-ma-block="#l-login"><i class="notika-icon notika-right-arrow"></i> <span>Sign in</span></a>
-                <a href="" data-ma-action="nk-login-switch" data-ma-block="#l-register"><i class="notika-icon notika-plus-symbol"></i> <span>Register</span></a>
+                <a href="" data-ma-action="nk-login-switch" data-ma-block="#l-login"><i class="notika-icon notika-right-arrow"></i> <span>Iniciar Sesion</span></a>
+                <a href="" data-ma-action="nk-login-switch" data-ma-block="#l-register"><i class="notika-icon notika-plus-symbol"></i> <span>Registrar</span></a>
             </div>
         </div>
     </div>
-    <!-- Login Register area End-->
     <script src={% static "js/vendor/jquery-1.12.4.min.js"%}></script>
     <script src={% static "js/bootstrap.min.js"%}></script>
     <script src={% static "js/wow.min.js"%}></script>
