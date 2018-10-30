@@ -1,33 +1,42 @@
 {% extends 'contenedor/base.html' %}
-
 {% block content %}
 	<div class="container">
-		
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<div class="panel-title"><h4>Post List</h4></div>
+				<div>
+					<a class="btn btn-info" href="/post/new/" > <i class="fa fa-plus"></i></a>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="table-responsive">
+					<table id="data-table-basic" class="table table-striped">
+						<thead>
+							<tr>
+								<th>Fecha</th>
+								<th>Titulo</th>
+								<th>Descripcion</th>
+								<th>Accion</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for post in posts %}
+								<tr>
+									<td>{{ post.title }}</td>
+									<td>{{ post.published_date }}</td>
+									<td>{{ post.text|linebreaksbr }}</td>
+									<td>
+										<a class="btn btn-info" href="/post/edit/{{post.id}}/"> <i class="fa fa-pencil"></i></a>
+									</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+						<tfoot>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="table-responsive">
-		<table id="data-table-basic" class="table table-striped">
-			<thead>
-				<tr>
-					<th>Fecha</th>
-					<th>Titulo</th>
-					<th>Descripcion</th>
-					<th>Accion</th>
-				</tr>
-			</thead>
-			<tbody>
-				{% for post in posts %}
-					<tr>
-						<td>{{ post.title }}</td>
-						<td>{{ post.published_date }}</td>
-						<td>{{ post.text|linebreaksbr }}</td>
-						<td>
-							<a class="btn btn-info" href="/post/edit/{{post.id}}/">Abrir</a>
-						</td>
-					</tr>
-				{% endfor %}
-			</tbody>
-			<tfoot>
-			</tfoot>
-		</table>
-	</div>
+	
 {% endblock	 %}
